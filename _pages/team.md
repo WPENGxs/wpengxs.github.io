@@ -5,7 +5,6 @@ title: Team
 description:
 nav: true
 nav_order: 2
-subtitle: MLNLP Title
 
 profile:
   align: left # right
