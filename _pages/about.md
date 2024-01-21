@@ -2,15 +2,15 @@
 layout: page
 title: About
 permalink: /
-subtitle: MLNLP Title
+title: About
 
-profile:
-  align: left # right
-  image: 
-  image_circular: false # crops the image to make it circular
-  address: >
+# profile:
+#   align: left # right
+#   image: 
+#   image_circular: false # crops the image to make it circular
+#   address: >
 
-news: true  # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+# news: true  # includes a list of news items
+# selected_papers: false # includes a list of papers marked as "selected={true}"
+# social: false  # includes social icons at the bottom of the page
 ---
