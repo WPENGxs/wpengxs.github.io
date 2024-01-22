@@ -8,6 +8,11 @@ layout: default
           <!-- <h1 class="post-title">
            {% if site.title == "blank" -%}{{ site.first_name }} {{ site.middle_name }} <span class="font-weight-bold"></span>{{ site.last_name }}</span>{%- else -%}{{ site.title }}{%- endif %}
           </h1> -->
+          {%- assign logo_path = page.logo | prepend: 'assets/img/' -%}
+
+          {% include figure.html 
+            path=logo_path 
+            class="img-fluid rounded" -%}
           <p class="desc">{{ page.subtitle }}</p>
         </header>
 
