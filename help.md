@@ -17,6 +17,9 @@ inline: true
 your context
 ```
 
-### 如何更新/team中的人员
+### 如何更新/committee中的人员
 #### 添加
-请在```/_layouts/team.html```
+请在```/_layouts/committee.html```
+
+### 如何更新/projects中的repo
+#### 添加
