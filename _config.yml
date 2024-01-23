@@ -110,8 +110,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Activities # blog_name will be displayed in your blog page
-blog_nav_title: activities # your blog must have a title for it to be displayed in the nav bar
-blog_description: Activities
+blog_nav_title: Activities # your blog must have a title for it to be displayed in the nav bar
+blog_description: Activities on MLNLP Group
 permalink: /detail/:year/:title/
 
 # Pagination
@@ -217,9 +217,9 @@ jekyll-archives:
     tag: archive-tag
     category: archive-category
   permalinks:
-    year: '/blog/:year/'
-    tag: '/blog/tag/:name/'
-    category: '/blog/category/:name/'
+    year: '/activities/:year/'
+    tag: '/activities/tag/:name/'
+    category: '/activities/category/:name/'
 
 display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will be dispalyed on the front page of your blog
 
