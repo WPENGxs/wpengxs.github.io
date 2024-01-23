@@ -24,3 +24,11 @@ your context
 ### 如何更新/projects中的repo
 由于我使用的[GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_cn.md)无法统计组织的信息，目前只能通过手动添加的方式完善projects中的Github Repositories，开发者的[Top Issues Dashboard](https://github.com/anuraghazra/github-readme-stats/issues/1935)有列出该项计划。如果后面有更新到自动统计组织的Repos，再更新网站的该功能。
 #### 添加
+```
+<!-- repo name -->
+<div class="repo p-2 text-center">
+    <a href="https://github.com/MLNLP-World/{repo name}" rel="external nofollow noopener" target="_blank">
+        <img class="repo-img-light w-100" alt="" src="https://github-readme-stats.vercel.app/api/pin/?username=MLNLP-World&repo={repo name}&theme=default&show_owner=false">
+    </a>
+</div>
+```

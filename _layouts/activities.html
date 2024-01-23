@@ -15,7 +15,7 @@ layout: default
       <ul class="list-group list-group-horizontal">
         {% for tag in page.tags %}
           <li>
-            <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | prepend: '/activities/tag/' | relative_url }}">{{ tag }}</a>
+            <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
           </li>
           {% unless forloop.last %}
             <p>&bull;</p>
@@ -24,8 +24,6 @@ layout: default
       </ul>
     </div>
     {% endif %}
-
-    {%- include activity.html %}
   
     <!-- <ul class="post-list">
       {% for post in paginator.posts %}
@@ -87,6 +85,6 @@ layout: default
       {% endfor %}
     </ul> -->
   
-    <!-- {% include pagination.html %} -->
+    {% include pagination.html %}
   
   </div>

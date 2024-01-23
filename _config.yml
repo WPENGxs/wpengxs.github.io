@@ -229,14 +229,14 @@ display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will
 
 scholar:
 
-  last_name: [E]
-  first_name: [A]
+  last_name: []
+  first_name: []
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: activities.bib
+  bibliography: 
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
@@ -246,7 +246,7 @@ scholar:
   replace_strings: true
   join_strings: true
 
-  details_dir: bibliography
+  details_dir: 
   
   details_layout: bibtex.html
   details_link: Details
