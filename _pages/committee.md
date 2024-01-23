@@ -2,7 +2,7 @@
 layout: committee
 permalink: /committee/
 title: Committee
-description:
+description: This is committee
 nav: true
 nav_order: 2
 
