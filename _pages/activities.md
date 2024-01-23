@@ -3,6 +3,7 @@ layout: page # activities
 permalink: /activities/
 title: Activities
 description: This is activities
+years: [2023, 2022, 2021]
 nav: true
 nav_order: 3
 ---
