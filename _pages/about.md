@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: About
 permalink: /
 logo: logo_1.png
