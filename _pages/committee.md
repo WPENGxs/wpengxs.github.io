@@ -1,7 +1,7 @@
 ---
-layout: team
-permalink: /team/
-title: Team
+layout: committee
+permalink: /committee/
+title: Committee
 description:
 nav: true
 nav_order: 2
