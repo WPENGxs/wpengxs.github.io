@@ -9,7 +9,7 @@ nav_order: 3
 pagination:
   enabled: true
   collection: posts
-  permalink: /activities/:num/
+  permalink: /page/:num/
   per_page: 5
   sort_field: date
   sort_reverse: true
