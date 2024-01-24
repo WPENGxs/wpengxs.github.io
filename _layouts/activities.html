@@ -9,14 +9,14 @@ layout: default
     {{ content }}
   </div>
 
-  {% for activity in site.activities %}
+  <!-- {% for activity in site.activities %}
   <h2>{{ activity.name }} - {{ activity.date }}</h2>
   <p>{{ activity.content | markdownify }}</p>
-  {% endfor %}
+  {% endfor %} -->
 
   <div class="publications">
     <ol class="bibliography">
-      
+
       {% for activity in site.activities %}
       {% assign tags_string = activity.tags | join: ' ' %}
       <li class="{{tags_string}}">
@@ -30,7 +30,7 @@ layout: default
             <div class="periodical">{{activity.detail}}</div>
             <div class="links"> 
               {% for tag in activity.tags %}
-              <div class="btn btn-sm z-depth-0" role="button">{{tag}}</div> 
+              <a href="" class="btn btn-sm z-depth-0" role="button">{{tag}}</a> 
               {% endfor %}
             </div>
           </div>
