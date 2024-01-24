@@ -23,146 +23,77 @@ layout: default
     <br>
         <div class="speakers">
             <h2>学术委员会</h2>
-            <details>
-                <summary class="h4">第一届</summary>
+            {% for acad in site.cacad %}
+                {%- assign now_num = acad.num -%}
+                <details>
+                <summary class="h4">{{acad.num_en}} session</summary>
                 <div class="row row-cols-3">
 
-                    <!-- libo qin -->
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">Meow Meow
-                                        </div>
-                                        <div style="font-size: 0.8rem;">Meow University
-                                        </div>
-    
-                                        <!-- <div class="row ml-1 mr-1 p-0">
-    
-    
-                                            <div class="google-scholar-icon">
-                                                <div class="icon" data-toggle="tooltip" title="Google Scholar">
-                                                    <a href="https://scholar.google.com" title="GoogleScholar" target="_blank"
-                                                        rel="noopener noreferrer"><i
-                                                            class="ai ai-google-scholar"></i></a>
-                                                </div>
-                                            </div>
-    
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                {% if acad.num != now_num %}
                     </div>
-    
-                    <!-- start test item -->
+                    </details>
+                    <details>
+                    <summary class="h4">{{acad.num_en}} session</summary>
+                    <div class="row row-cols-3">
+                    {%- assign now_num = acad.num -%}
+                {% else %}
                     <div class="card-item col">
                         <div class="card hoverable">
                             <div class="row g-0">
                                 <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+                                    <img src="/assets/img/{{acad.img}}" srcset="/assets/img/{{acad.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">MeowMeow Miii
+                                        <div style="font-weight: 400;">{{acad.name}}
                                         </div>
-                                        <div style="font-size: 0.8rem;">MeowMeow Miii University
+                                        <div style="font-size: 0.8rem;">{{acad.university}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">Meow Meow
-                                        </div>
-                                        <div style="font-size: 0.8rem;">Meow University
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end test -->
+                {% endif %}
                 </div>
-            </details>
-
+                </details>
+            {% endfor %}
             <h2>秘书处</h2>
-            <details>
-                <summary class="h4">第一届</summary>
+            {% for secr in site.csecr %}
+                {%- assign now_num = secr.num -%}
+                <details>
+                <summary class="h4">{{secr.num_en}} session</summary>
                 <div class="row row-cols-3">
-                    <!-- start test -->
+
+                {% if secr.num != now_num %}
+                    </div>
+                    </details>
+                    <details>
+                    <summary class="h4">{{secr.num_en}} session</summary>
+                    <div class="row row-cols-3">
+                    {%- assign now_num = secr.num -%}
+                {% else %}
                     <div class="card-item col">
                         <div class="card hoverable">
                             <div class="row g-0">
                                 <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+                                    <img src="/assets/img/{{secr.img}}" srcset="/assets/img/{{secr.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">MeowMeow Miii
+                                        <div style="font-weight: 400;">{{secr.name}}
                                         </div>
-                                        <div style="font-size: 0.8rem;">MeowMeow Miii University
+                                        <div style="font-size: 0.8rem;">{{secr.university}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">Meow Meow
-                                        </div>
-                                        <div style="font-size: 0.8rem;">Meow University
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <!-- img 1:1 -->
-                                    <img src="/assets/img/cat.jpeg" srcset="/assets/img/cat.jpeg" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">Meow Meow
-                                        </div>
-                                        <div style="font-size: 0.8rem;">Meow University
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end test -->
+                {% endif %}
                 </div>
-            </details>
+                </details>
+            {% endfor %}
             
         </div>
     <br>
