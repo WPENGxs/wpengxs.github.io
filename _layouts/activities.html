@@ -13,21 +13,35 @@ layout: default
     <ol class="bibliography">
       <li style="display: grid; justify-content: left;">
         <div style="border: solid #00369f; border-width: 1.5px; padding: 5px; border-radius: 0.25rem; align-items: center;">
-          <a href="https://github.com/MLNLP-World" style="font-weight: 200;">
-            Join us
+          <a id="all" style="font-weight: 200;">
+            ALL
           </a>
         </div>
       </li>
-    </ul>
+
+      <ol class="bibliography">
+        <li style="display: grid; justify-content: left;">
+          <div style="border: solid #00369f; border-width: 1.5px; padding: 5px; border-radius: 0.25rem; align-items: center;">
+            <a id="join-us" style="font-weight: 200;">
+              Join us
+            </a>
+          </div>
+        </li>
+    </ol>
   </div>
 
-  <!-- {% for activity in site.activities %}
-  <h2>{{ activity.name }} - {{ activity.date }}</h2>
-  <p>{{ activity.content | markdownify }}</p>
-  {% endfor %} -->
+  <script>
+    document.getElementById("all").addEventListener("click", function() {
+      var listItems = document.querySelectorAll(".show_list li");
+      for (var i = 0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+        listItem.style.display = "block";
+      }
+    });
+  </script>
 
   <div class="publications">
-    <ol class="bibliography">
+    <ol class="bibliography show_list">
 
       {% assign sorted_activities = site.activities | sort_natural: 'date' %}
       {% for activity in sorted_activities %}
@@ -57,3 +71,17 @@ layout: default
 
 
 </div>
+
+<script>
+  document.getElementById("join-us").addEventListener("click", function() {
+    var listItems = document.querySelectorAll(".show_list li");
+    for (var i = 0; i < listItems.length; i++) {
+      var listItem = listItems[i];
+      if (listItem.classList.contains("ccf")) {
+        listItem.style.display = "block";
+      } else {
+        listItem.style.display = "none";
+      }
+    }
+  });
+</script>

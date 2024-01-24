@@ -7,5 +7,5 @@ href: https://github.com/MLNLP-World
 title: mlnlp_test
 people: Libo Qin, Meoww Meow
 detail: This is detail
-tags: ['ccf', 'nlp']
+tags: ['nlp']
 ---
