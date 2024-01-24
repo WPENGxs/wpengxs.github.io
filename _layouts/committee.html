@@ -24,8 +24,9 @@ layout: default
         <div class="speakers">
             <h2>学术委员会</h2>
 
+            {% assign sorted_cacad = site.cacad | sort_natural: 'num' %}
             {%- assign now_num = 0 -%}
-            {% for acad in site.cacad %}
+            {% for acad in sorted_cacad %}
 
                 {% if now_num == 0 %}
                     <details>
@@ -64,9 +65,10 @@ layout: default
             </details>
 
             <h2>秘书处</h2>
-            
+
+            {% assign sorted_csecr = site.csecr | sort_natural: 'num' %}
             {%- assign now_num = 0 -%}
-            {% for secr in site.csecr %}
+            {% for secr in sorted_csecr %}
 
                 {% if now_num == 0 %}
                     <details>
