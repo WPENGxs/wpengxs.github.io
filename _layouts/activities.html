@@ -53,6 +53,11 @@ layout: default
     });
   </script>
 
+{% assign itemsPerPage = 5 %}
+{% assign currentPage = 1 %}
+{% assign totalItems = items.size %}
+{% assign totalPages = totalItems | divided_by: itemsPerPage | plus: 1 %}
+
   <div class="publications">
     <ol class="bibliography show_list">
 
@@ -80,7 +85,42 @@ layout: default
       {% endfor %}
 
     </ol>
+
+    <div id="pagination">
+      {% for page in (1..totalPages) %}
+        <button onclick="goToPage({{ page }})">{{ page }}</button>
+      {% endfor %}
+    </div>
   </div>
 
-
 </div>
+
+<script>
+  function goToPage(pageNumber) {
+    if (pageNumber < 1 || pageNumber > {{ totalPages }}) {
+      return; // 防止超出页码范围
+    }
+  
+    currentPage = pageNumber;
+    updatePage();
+  }
+  
+  function updatePage() {
+    var listItems = document.querySelectorAll("ol li");
+  
+    // 隐藏所有项目
+    for (var i = 0; i < listItems.length; i++) {
+      listItems[i].style.display = "none";
+    }
+  
+    // 显示当前页面的项目
+    var startIndex = (currentPage - 1) * {{ itemsPerPage }};
+    var endIndex = startIndex + {{ itemsPerPage }};
+  
+    for (var j = startIndex; j < endIndex && j < listItems.length; j++) {
+      listItems[j].style.display = "list-item";
+    }
+  }
+  
+  updatePage();
+  </script>
