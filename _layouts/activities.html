@@ -131,7 +131,7 @@ layout: default
       button.textContent = i;
       button.addEventListener("click", function () {
         currentPage = parseInt(this.textContent);
-        showPage(currentPage);
+        showPage(currentPage, listItems);
       });
       paginationDiv.appendChild(button);
     }
