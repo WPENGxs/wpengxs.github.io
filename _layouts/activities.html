@@ -36,6 +36,7 @@ layout: default
                 listItem.style.display = "none";
               }
             }
+            updatePagination();
           });
         </script>
         {% endfor %}
@@ -50,10 +51,11 @@ layout: default
         var listItem = listItems[i];
         listItem.style.display = "block";
       }
+      updatePagination();
     });
   </script>
 
-  <div class="publications">
+  <div class="publications list_">
     <ol class="bibliography show_list">
 
       {% assign sorted_activities = site.activities | sort_natural: 'date' %}
@@ -83,3 +85,67 @@ layout: default
   </div>
 
 </div>
+
+<!-- Pagination Variables -->
+<script>
+  var itemsPerPage = 5; // 每页显示的li数量
+  var currentPage = 1; // 当前页码
+  var listItems = document.querySelectorAll(".show_list li");
+  var totalPages = Math.ceil(listItems.length / itemsPerPage);
+
+  function updatePagination() {
+    // 隐藏所有li元素
+    for (var i = 0; i < listItems.length; i++) {
+      var listItem = listItems[i];
+      listItem.style.display = "none";
+    }
+
+    // 显示当前页的li元素
+    var startIndex = (currentPage - 1) * itemsPerPage;
+    var endIndex = startIndex + itemsPerPage;
+    for (var j = startIndex; j < endIndex; j++) {
+      var listItem = listItems[j];
+      if (listItem) {
+        listItem.style.display = "block";
+      }
+    }
+
+    // 更新分页器按钮
+    var paginationButtons = document.querySelectorAll(".pagination-button");
+    for (var k = 0; k < paginationButtons.length; k++) {
+      var button = paginationButtons[k];
+      if (button.getAttribute("data-page") == currentPage) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    }
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    updatePagination();
+  }
+
+  // 初始化分页器按钮
+  var paginationContainer = document.createElement("div");
+  paginationContainer.className = "pagination-container";
+  for (var page = 1; page <= totalPages; page++) {
+    var button = document.createElement("button");
+    button.className = "pagination-button";
+    button.setAttribute("data-page", page);
+    button.textContent = page;
+    button.addEventListener("click", function() {
+      var page = parseInt(this.getAttribute("data-page"));
+      goToPage(page);
+    });
+    paginationContainer.appendChild(button);
+  }
+
+  // 插入分页器到页面
+  var publicationsDiv = document.querySelector(".list_");
+  publicationsDiv.insertBefore(paginationContainer, listItems[0]);
+  
+  // 显示每页的初始内容
+  updatePagination();
+</script>
