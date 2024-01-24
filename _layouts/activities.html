@@ -36,11 +36,12 @@ layout: default
                 listItem.style.display = "none";
               }
             }
+
+            var listItems = document.querySelectorAll(".show_list li:not([style*='display: none'])");
+            createPaginationButtons(listItems);
+            showPage(currentPage, listItems);
           });
           
-          var listItems = document.querySelectorAll(".show_list li:not([style*='display: none'])");
-          createPaginationButtons(listItems);
-          showPage(currentPage, listItems);
         </script>
         {% endfor %}
 
@@ -54,11 +55,11 @@ layout: default
         var listItem = listItems[i];
         listItem.style.display = "block";
       }
+      var listItems = document.querySelectorAll(".show_list li");
+      createPaginationButtons(listItems);
+      showPage(currentPage, listItems);
     });
-
-    var listItems = document.querySelectorAll(".show_list li");
-    createPaginationButtons(listItems);
-    showPage(currentPage, listItems);
+    
   </script>
 
   <div class="publications list_">
