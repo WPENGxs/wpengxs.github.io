@@ -23,12 +23,12 @@ layout: default
     <br>
         <div class="speakers">
             <h2>学术委员会</h2>
+            <details>
+            <summary class="h4">{{acad.num_en}} session</summary>
+            <div class="row row-cols-3">
             {% for acad in site.cacad %}
                 {%- assign now_num = acad.num -%}
-                <details>
-                <summary class="h4">{{acad.num_en}} session</summary>
-                <div class="row row-cols-3">
-
+                
                 {% if acad.num != now_num %}
                     </div>
                     </details>
@@ -55,16 +55,17 @@ layout: default
                         </div>
                     </div>
                 {% endif %}
-                </div>
-                </details>
             {% endfor %}
+            </div>
+            </details>
+
             <h2>秘书处</h2>
+            <details>
+            <summary class="h4">{{secr.num_en}} session</summary>
+            <div class="row row-cols-3">
             {% for secr in site.csecr %}
                 {%- assign now_num = secr.num -%}
-                <details>
-                <summary class="h4">{{secr.num_en}} session</summary>
-                <div class="row row-cols-3">
-
+                
                 {% if secr.num != now_num %}
                     </div>
                     </details>
@@ -91,9 +92,9 @@ layout: default
                         </div>
                     </div>
                 {% endif %}
-                </div>
-                </details>
             {% endfor %}
+            </div>
+            </details>
             
         </div>
     <br>
