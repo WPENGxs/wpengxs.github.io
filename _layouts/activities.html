@@ -9,6 +9,11 @@ layout: default
     {{ content }}
   </div>
 
+  <script>
+    var itemsPerPage = 5; // 每页显示的项数
+    var currentPage = 1;
+  </script>
+
   <div class="publications">
       <div style="display: flex; justify-content: left; padding:5px; flex-wrap: wrap">
 
@@ -27,9 +32,9 @@ layout: default
 
         <script>
           document.getElementById("{{tag}}").addEventListener("click", function() {
-            var listItems = document.querySelectorAll(".show_list li");
-            for (var i = 0; i < listItems.length; i++) {
-              var listItem = listItems[i];
+            var listItemsAll = document.querySelectorAll(".show_list li");
+            for (var i = 0; i < listItemsAll.length; i++) {
+              var listItem = listItemsAll[i];
               if (listItem.classList.contains("{{tag}}")) {
                 listItem.style.display = "block";
               } else {
@@ -50,11 +55,11 @@ layout: default
 
   <script>
     document.getElementById("all").addEventListener("click", function() {
-      var listItems = document.querySelectorAll(".show_list li");
-      for (var i = 0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-        listItem.style.display = "block";
-      }
+      // var listItemsAll = document.querySelectorAll(".show_list li");
+      // for (var i = 0; i < listItemsAll.length; i++) {
+      //   var listItem = listItemsAll[i];
+      //   listItem.style.display = "block";
+      // }
       var listItems = document.querySelectorAll(".show_list li");
       createPaginationButtons(listItems);
       showPage(currentPage, listItems);
@@ -97,10 +102,6 @@ layout: default
 </div>
 
 <script>
-  var itemsPerPage = 5; // 每页显示的项数
-  var currentPage = 1;
-
-  var listItems = document.querySelectorAll(".show_list li");
 
   function showPage(page, listItems) {
     for (var i = 0; i < listItems.length; i++) {
@@ -135,6 +136,8 @@ layout: default
       paginationDiv.appendChild(button);
     }
   }
+
+  var listItems = document.querySelectorAll(".show_list li");
 
   createPaginationButtons(listItems);
   showPage(currentPage, listItems);
