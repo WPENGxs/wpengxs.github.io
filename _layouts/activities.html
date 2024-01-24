@@ -55,7 +55,7 @@ layout: default
 
 {% assign itemsPerPage = 5 %}
 {% assign currentPage = 1 %}
-{% assign totalItems = items.size %}
+{% assign totalItems = site.activities.size %}
 {% assign totalPages = totalItems | divided_by: itemsPerPage | plus: 1 %}
 
   <div class="publications">
