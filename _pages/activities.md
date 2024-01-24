@@ -6,26 +6,12 @@ description: This is activities
 nav: true
 nav_order: 3
 
-# profile:
-#   align: left # right
-#   image: 
-#   image_circular: false # crops the image to make it circular
-#   address: >
+profile:
+  align: left # right
+  image: 
+  image_circular: false # crops the image to make it circular
+  address: >
 
 activities: true
-
-tags: ['test', 'ccf']
 ---
 
-{% for activity in site.activities %}
-  <h2>{{ activity.name }} - {{ activity.date }}</h2>
-  <p>{{ activity.content | markdownify }}</p>
-{% endfor %}
-
-<div class="publications">
-  <ol class="bibliography">
-  <li>
-    <div class="row"> <div class="col-sm-2 abbr"></div> <div id="cheng2023binding" class="col-sm-8"> <div class="title">Binding Language Models in Symbolic Languages</div> <div class="author"> Zhoujun Cheng,&nbsp;Tianbao Xie,&nbsp;Peng Shi,&nbsp;Chengzu Li,&nbsp;Rahul Nadkarni,&nbsp;Yushi Hu,&nbsp;Caiming Xiong,&nbsp;Dragomir Radev,&nbsp;Mari Ostendorf,&nbsp;Luke Zettlemoyer,&nbsp;Noah A Smith,&nbsp;and Tao Yu, </div> <div class="periodical"> <em>In International Conference on Learning Representations (ICLR 2023)</em> 2023 </div> <div class="links"> <a href="http://arxiv.org/abs/2210.02875" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">arXiv</a> <a href="https://lm-code-binder.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://lm-code-binder.github.io/" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Poster</a> </div> </div> </div>
-  </li>
-  </ol>
-</div>
