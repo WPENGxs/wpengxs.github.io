@@ -29,7 +29,8 @@ layout: default
   <div class="publications">
     <ol class="bibliography">
 
-      {% for activity in site.activities %}
+      {% assign sorted_activities = site.activities | sort_natural: 'date' %}
+      {% for activity in sorted_activities %}
       {% assign tags_string = activity.tags | join: ' ' %}
       <li class="{{tags_string}}">
         <div class="row">

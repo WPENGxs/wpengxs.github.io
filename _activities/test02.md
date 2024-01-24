@@ -1,6 +1,6 @@
 ---
 name: new live test
-date: Oct 1, 2024
+date: 2024-01-01
 
 img: mlnlp.jpg
 href: https://github.com/MLNLP-World
