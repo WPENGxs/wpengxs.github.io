@@ -37,8 +37,10 @@ layout: default
               }
             }
           });
-          createPaginationButtons();
-          showPage(currentPage);
+          
+          var listItems = document.querySelectorAll(".show_list li:not([style*='display: none'])");
+          createPaginationButtons(listItems);
+          showPage(currentPage, listItems);
         </script>
         {% endfor %}
 
@@ -53,8 +55,10 @@ layout: default
         listItem.style.display = "block";
       }
     });
-    createPaginationButtons();
-    showPage(currentPage);
+
+    var listItems = document.querySelectorAll(".show_list li");
+    createPaginationButtons(listItems);
+    showPage(currentPage, listItems);
   </script>
 
   <div class="publications list_">
@@ -93,11 +97,11 @@ layout: default
 
 <script>
   var itemsPerPage = 5; // 每页显示的项数
-  var listItems = document.querySelectorAll(".show_list li");
-  var totalPages = Math.ceil(listItems.length / itemsPerPage);
   var currentPage = 1;
 
-  function showPage(page) {
+  var listItems = document.querySelectorAll(".show_list li");
+
+  function showPage(page, listItems) {
     for (var i = 0; i < listItems.length; i++) {
       listItems[i].style.display = "none";
     }
@@ -112,10 +116,12 @@ layout: default
     }
   }
 
-  function createPaginationButtons() {
+  function createPaginationButtons(listItems) {
+    var totalPages = Math.ceil(listItems.length / itemsPerPage);
+
     var paginationDiv = document.getElementById("pagination");
     paginationDiv.innerHTML = ''; // 清空之前的按钮
-    
+
     var maxButtonsToShow = Math.min(totalPages, 5); // 最多显示的按钮数量，取总页数和5的较小值
 
     for (var i = 1; i <= totalPages; i++) {
@@ -129,6 +135,6 @@ layout: default
     }
   }
 
-  createPaginationButtons();
-  showPage(currentPage);
+  createPaginationButtons(listItems);
+  showPage(currentPage, listItems);
 </script>
