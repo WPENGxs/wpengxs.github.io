@@ -14,7 +14,6 @@ profile:
 
 activities: true
 all_tags: ['ccf', 'nlp', 'llm']
-items_per_page: 5
 ---
 ### title
 some text

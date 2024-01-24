@@ -49,7 +49,7 @@ img: cat.jpeg # 成员的照片，比例为1:1最佳，照片请上传至/assets
 #### 更新左上的标签
 请在```/_page/activities.md```中的```all_tags```数组中添加标签即可
 #### 更新分页的活动数量
-请修改```/_page/activities.md```中的```items_per_page```数字即可
+请修改```/_layout/activities.html```中的```var itemsPerPage = 你想每页展示的项数;```即可
 #### 添加活动
 请在```/_activities```目录下新建.md文件，内容为
 ```
