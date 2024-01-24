@@ -51,8 +51,13 @@ layout: default
                             </div>
                             <div class="col-sm-6">
                                 <div class="card-body" style="padding: 0.2rem;">
+                                    {% if acad.href %}
+                                    <a href="{{acad.href}}" style="font-weight: 400;">{{acad.name}}
+                                    </a>
+                                    {% else %}
                                     <div style="font-weight: 400;">{{acad.name}}
                                     </div>
+                                    {% endif %}
                                     <div style="font-size: 0.8rem;">{{acad.university}}
                                     </div>
                                 </div>
@@ -93,8 +98,13 @@ layout: default
                             </div>
                             <div class="col-sm-6">
                                 <div class="card-body" style="padding: 0.2rem;">
+                                    {% if secr.href %}
+                                    <a href="{{secr.href}}" style="font-weight: 400;">{{secr.name}}
+                                    </a>
+                                    {% else %}
                                     <div style="font-weight: 400;">{{secr.name}}
                                     </div>
+                                    {% endif %}
                                     <div style="font-size: 0.8rem;">{{secr.university}}
                                     </div>
                                 </div>

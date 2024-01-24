@@ -28,6 +28,7 @@ university: meow university # 成员的所属学校
 num_en: First # 成员所属的委员会届数英文
 num: 1 # 成员所属的委员会届数数字，用于成员的定位
 img: cat.jpeg # 成员的照片，比例为1:1最佳，照片请上传至/assets/img
+href:  # 成员的个人链接，没有可以为空
 ---
 ```
 #### 添加秘书处成员
@@ -40,6 +41,7 @@ university: meow university # 成员的所属学校
 num_en: First # 成员所属的委员会届数英文
 num: 1 # 成员所属的委员会届数数字，用于成员的定位
 img: cat.jpeg # 成员的照片，比例为1:1最佳，照片请上传至/assets/img
+href:  # 成员的个人链接，没有可以为空
 ---
 ```
 #### 删除成员
