@@ -82,4 +82,46 @@ layout: default
     </ol>
   </div>
 
+  <div id="pagination" style="margin-top: 10px; display: flex; justify-content: center;">
+  </div>
+
 </div>
+
+<script>
+  var itemsPerPage = 5; // 每页显示的项数
+  var listItems = document.querySelectorAll(".show_list li");
+  var totalPages = Math.ceil(listItems.length / itemsPerPage);
+  var currentPage = 1;
+
+  function showPage(page) {
+    for (var i = 0; i < listItems.length; i++) {
+      listItems[i].style.display = "none";
+    }
+
+    var startIndex = (page - 1) * itemsPerPage;
+    var endIndex = startIndex + itemsPerPage;
+
+    for (var i = startIndex; i < endIndex; i++) {
+      if (listItems[i]) {
+        listItems[i].style.display = "block";
+      }
+    }
+  }
+
+  function createPaginationButtons() {
+    var paginationDiv = document.getElementById("pagination");
+
+    for (var i = 1; i <= totalPages; i++) {
+      var button = document.createElement("button");
+      button.textContent = i;
+      button.addEventListener("click", function () {
+        currentPage = parseInt(this.textContent);
+        showPage(currentPage);
+      });
+      paginationDiv.appendChild(button);
+    }
+  }
+
+  createPaginationButtons();
+  showPage(currentPage);
+</script>
