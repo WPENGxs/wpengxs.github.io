@@ -9,6 +9,18 @@ layout: default
     {{ content }}
   </div>
 
+  <div>
+    <ul class="ml-auto">
+      <li style="display: grid; justify-content: left;">
+        <div style="border: solid #00369f; padding: 5px; border-radius: 0.5rem; align-items: center;">
+          <a href="https://github.com/MLNLP-World" style="font-weight: 400;">
+            Join us
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
   <!-- {% for activity in site.activities %}
   <h2>{{ activity.name }} - {{ activity.date }}</h2>
   <p>{{ activity.content | markdownify }}</p>
@@ -21,7 +33,7 @@ layout: default
       {% assign tags_string = activity.tags | join: ' ' %}
       <li class="{{tags_string}}">
         <div class="row">
-          <div class="col-sm-2 card-img">
+          <div class="col-sm-2 card-img" style="height: 150px;">
             <img src="/assets/ac_img/{{activity.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
           </div>
           <div class="col-sm-8">
