@@ -16,6 +16,29 @@ layout: default
 
   <div class="publications">
     <ol class="bibliography">
+      
+      {% for activity in site.activities %}
+      {% assign tags_string = activity.tags | join: ' ' %}
+      <li class="{{tags_string}}">
+        <div class="row">
+          <div class="col-sm-2 card-img">
+            <img src="/assets/ac_img/{{activity.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+          </div>
+          <div class="col-sm-8">
+            <a href="{{activity.href}}" class="title">{{activity.title}}</a>
+            <div class="author">{{activity.people}}</div>
+            <div class="periodical">{{activity.detail}}</div>
+            <div class="links"> 
+              {% for tag in activity.tags %}
+              <div class="btn btn-sm z-depth-0" role="button">{{tag}}</div> 
+              {% endfor %}
+            </div>
+          </div>
+          <hr color="#cccccc" size="2" width="50%">
+        </div>
+      </li>
+      {% endfor %}
+
       <li>
         <div class="row">
           <div class="col-sm-2 card-img">
@@ -36,6 +59,7 @@ layout: default
           <hr color="#cccccc" size="2" width="50%">
         </div>
       </li>
+
     </ol>
   </div>
 
