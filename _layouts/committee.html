@@ -23,12 +23,16 @@ layout: default
     <br>
         <div class="speakers">
             <h2>学术委员会</h2>
-            <details>
-            <summary class="h4">{{acad.num_en}} session</summary>
-            <div class="row row-cols-3">
+            {%- assign now_num = 0 -%}
             {% for acad in site.cacad %}
-                {%- assign now_num = acad.num -%}
-                
+
+                {% if now_num = 0 %}
+                    <details>
+                    <summary class="h4">{{acad.num_en}} session</summary>
+                    <div class="row row-cols-3">
+                    {%- assign now_num = acad.num -%}
+                {% endif %}
+
                 {% if acad.num != now_num %}
                     </div>
                     </details>
@@ -36,35 +40,38 @@ layout: default
                     <summary class="h4">{{acad.num_en}} session</summary>
                     <div class="row row-cols-3">
                     {%- assign now_num = acad.num -%}
-                {% else %}
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <img src="/assets/img/{{acad.img}}" srcset="/assets/img/{{acad.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">{{acad.name}}
-                                        </div>
-                                        <div style="font-size: 0.8rem;">{{acad.university}}
-                                        </div>
+                {% endif %}
+                <div class="card-item col">
+                    <div class="card hoverable">
+                        <div class="row g-0">
+                            <div class="card-img col-sm-6" style="font-weight: 200;">
+                                <img src="/assets/img/{{acad.img}}" srcset="/assets/img/{{acad.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card-body" style="padding: 0.2rem;">
+                                    <div style="font-weight: 400;">{{acad.name}}
+                                    </div>
+                                    <div style="font-size: 0.8rem;">{{acad.university}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endif %}
+                </div>
             {% endfor %}
             </div>
             </details>
 
             <h2>秘书处</h2>
-            <details>
-            <summary class="h4">{{secr.num_en}} session</summary>
-            <div class="row row-cols-3">
+            {%- assign now_num = 0 -%}
             {% for secr in site.csecr %}
-                {%- assign now_num = secr.num -%}
+
+                {% if now_num = 0 %}
+                    <details>
+                    <summary class="h4">{{secr.num_en}} session</summary>
+                    <div class="row row-cols-3">
+                    {%- assign now_num = secr.num -%}
+                {% endif %}
                 
                 {% if secr.num != now_num %}
                     </div>
@@ -73,25 +80,24 @@ layout: default
                     <summary class="h4">{{secr.num_en}} session</summary>
                     <div class="row row-cols-3">
                     {%- assign now_num = secr.num -%}
-                {% else %}
-                    <div class="card-item col">
-                        <div class="card hoverable">
-                            <div class="row g-0">
-                                <div class="card-img col-sm-6" style="font-weight: 200;">
-                                    <img src="/assets/img/{{secr.img}}" srcset="/assets/img/{{secr.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="card-body" style="padding: 0.2rem;">
-                                        <div style="font-weight: 400;">{{secr.name}}
-                                        </div>
-                                        <div style="font-size: 0.8rem;">{{secr.university}}
-                                        </div>
+                {% endif %}
+                <div class="card-item col">
+                    <div class="card hoverable">
+                        <div class="row g-0">
+                            <div class="card-img col-sm-6" style="font-weight: 200;">
+                                <img src="/assets/img/{{secr.img}}" srcset="/assets/img/{{secr.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card-body" style="padding: 0.2rem;">
+                                    <div style="font-weight: 400;">{{secr.name}}
+                                    </div>
+                                    <div style="font-size: 0.8rem;">{{secr.university}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endif %}
+                </div>
             {% endfor %}
             </div>
             </details>
