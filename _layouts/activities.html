@@ -37,6 +37,8 @@ layout: default
               }
             }
           });
+          createPaginationButtons();
+          showPage(currentPage);
         </script>
         {% endfor %}
 
@@ -51,6 +53,8 @@ layout: default
         listItem.style.display = "block";
       }
     });
+    createPaginationButtons();
+    showPage(currentPage);
   </script>
 
   <div class="publications list_">
@@ -82,7 +86,7 @@ layout: default
     </ol>
   </div>
 
-  <div id="pagination" style="margin-top: 10px; display: flex; justify-content: center;">
+  <div id="pagination" style="margin: 10px; display: flex; justify-content: center;">
   </div>
 
 </div>
