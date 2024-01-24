@@ -44,7 +44,7 @@ layout: default
 
             var listItems = document.querySelectorAll(".show_list li:not([style*='display: none'])");
             createPaginationButtons(listItems);
-            showPage(currentPage, listItems);
+            showPage(1, listItems);
           });
           
         </script>
@@ -62,7 +62,7 @@ layout: default
       // }
       var listItems = document.querySelectorAll(".show_list li");
       createPaginationButtons(listItems);
-      showPage(currentPage, listItems);
+      showPage(1, listItems);
     });
     
   </script>
