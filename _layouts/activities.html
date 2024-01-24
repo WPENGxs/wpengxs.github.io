@@ -66,7 +66,7 @@ layout: default
       <li class="{{tags_string}}">
         <div class="row">
           <div class="col-sm-2 card-img" style="height: 150px;">
-            <img src="/assets/ac_img/{{activity.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;">
+            <img src="/assets/ac_img/{{activity.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;" loading="lazy">
           </div>
           <div class="col-sm-8">
             <a href="{{activity.href}}" class="title">{{activity.title}}</a>
@@ -114,6 +114,9 @@ layout: default
 
   function createPaginationButtons() {
     var paginationDiv = document.getElementById("pagination");
+    paginationDiv.innerHTML = ''; // 清空之前的按钮
+    
+    var maxButtonsToShow = Math.min(totalPages, 5); // 最多显示的按钮数量，取总页数和5的较小值
 
     for (var i = 1; i <= totalPages; i++) {
       var button = document.createElement("button");
