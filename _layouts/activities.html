@@ -10,16 +10,16 @@ layout: default
   </div>
 
   <div class="publications">
-      <div style="display: flex; justify-content: left; padding:5px">
+      <div style="display: flex; justify-content: left; padding:5px; flex-wrap: wrap">
 
-        <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px; flex-grow: 1">
+        <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px;">
           <a id="all" style="font-weight: 200;">
             ALL
           </a>
         </div>
         
         {% for tag in page.all_tags %}
-        <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px; flex-grow: 1">
+        <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px;">
           <a id="{{tag}}" style="font-weight: 200; text-transform: uppercase;">
             {{tag}}
           </a>
