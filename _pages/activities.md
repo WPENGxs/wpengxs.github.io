@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: activities
 permalink: /activities/
 title: Activities
 description: This is activities
