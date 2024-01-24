@@ -11,17 +11,35 @@ layout: default
 
   <div class="publications">
       <div style="display: flex; justify-content: left; padding:5px">
+
         <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px;">
           <a id="all" style="font-weight: 200;">
             ALL
           </a>
         </div>
-
+        
+        {% for tag in page.all_tags %}
         <div style="border: solid #333333; border-width: 1.5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; border-radius: 0.25rem; align-items: center; margin-left: 5px; margin-right: 5px;">
-          <a id="join-us" style="font-weight: 200;">
-            Join us
+          <a id="{{tag}}" style="font-weight: 200;">
+            {{tag}}
           </a>
         </div>
+
+        <script>
+          document.getElementById("{{tag}}").addEventListener("click", function() {
+            var listItems = document.querySelectorAll(".show_list li");
+            for (var i = 0; i < listItems.length; i++) {
+              var listItem = listItems[i];
+              if (listItem.classList.contains("{{tag}}")) {
+                listItem.style.display = "block";
+              } else {
+                listItem.style.display = "none";
+              }
+            }
+          });
+        </script>
+        {% endfor %}
+
       </div>
   </div>
 
@@ -48,8 +66,8 @@ layout: default
           </div>
           <div class="col-sm-8">
             <a href="{{activity.href}}" class="title">{{activity.title}}</a>
-            <div class="author">{{activity.people}}</div>
-            <div class="periodical">{{activity.detail}}</div>
+            <div class="author" style="margin-top: 5px;margin-bottom: 5px;">{{activity.people}}</div>
+            <div class="periodical" style="margin-top: 5px;margin-bottom: 5px;">{{activity.detail}}</div>
             <div class="links"> 
               {% for tag in activity.tags %}
               <a href="" class="btn btn-sm z-depth-0" role="button">{{tag}}</a> 
@@ -66,17 +84,3 @@ layout: default
 
 
 </div>
-
-<script>
-  document.getElementById("join-us").addEventListener("click", function() {
-    var listItems = document.querySelectorAll(".show_list li");
-    for (var i = 0; i < listItems.length; i++) {
-      var listItem = listItems[i];
-      if (listItem.classList.contains("ccf")) {
-        listItem.style.display = "block";
-      } else {
-        listItem.style.display = "none";
-      }
-    }
-  });
-</script>

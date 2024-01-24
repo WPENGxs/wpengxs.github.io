@@ -13,6 +13,7 @@ profile:
   address: >
 
 activities: true
+all_tags: ['ccf', 'nlp', 'llm']
 ---
 ### title
 some text
