@@ -18,6 +18,6 @@ tags: ['test', 'ccf']
 ---
 
 {% for activity in site.activities %}
-  <h2>{{ activities.name }} - {{ activities.date }}</h2>
-  <p>{{ activities.content | markdownify }}</p>
+  <h2>{{ activity.name }} - {{ activity.date }}</h2>
+  <p>{{ activity.content | markdownify }}</p>
 {% endfor %}
