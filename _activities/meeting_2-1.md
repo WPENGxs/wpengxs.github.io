@@ -1,7 +1,7 @@
 ---
 date: 2023-09-23
 
-img: meeting_2-1.png
+img: meeting_2-1.jpg
 href: https://www.bilibili.com/video/BV1sz4y1F7Po
 title: 【MLNLP2023】大模型构建与微调
 people: 中国人工智能学会、中南大学

@@ -1,7 +1,7 @@
 ---
 date: 2023-09-23
 
-img: meeting_2-4.png
+img: meeting_2-4.jpg
 href: https://www.bilibili.com/video/BV1WN4y1Z7P4
 title: 【MLNLP2023】多模态多语言大模型
 people: 中国人工智能学会、中南大学

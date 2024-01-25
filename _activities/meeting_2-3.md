@@ -1,7 +1,7 @@
 ---
 date: 2023-09-23
 
-img: meeting_2-3.png
+img: meeting_2-3.jpg
 href: https://www.bilibili.com/video/BV1LC4y1d7Ja
 title: 【MLNLP2023】大模型评估与安全
 people: 中国人工智能学会、中南大学

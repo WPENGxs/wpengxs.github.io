@@ -1,7 +1,7 @@
 ---
 date: 2023-09-23
 
-img: meeting_2-5.png
+img: meeting_2-5.jpg
 href: https://www.bilibili.com/video/BV1tu411M77e
 title: 【MLNLP2023】大模型与知识图谱
 people: 中国人工智能学会、中南大学
