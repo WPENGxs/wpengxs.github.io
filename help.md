@@ -56,7 +56,6 @@ href:  # 成员的个人链接，没有可以为空
 请在```/_activities```目录下新建.md文件，内容为
 ```
 ---
-name: new live test
 date: 2024-10-10 # 活动时间 yyyy-mm-dd
 
 img: mlnlp.jpg # 活动卡照片，照片请上传至/assets/ac_img
