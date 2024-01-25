@@ -1,7 +1,7 @@
 ---
 date: 2023-04-26
 
-img: mlnlp.jpg
+img: CCF_1.jpg
 href: https://www.bilibili.com/video/BV1yj411k7kX
 title: 【CCF-NLP走进高校】走进苏州大学
 people: 苏州大学
