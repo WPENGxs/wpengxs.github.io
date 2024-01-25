@@ -70,7 +70,7 @@ layout: default
   <div class="publications list_">
     <ol class="bibliography show_list">
 
-      {% assign sorted_activities = site.activities | sort: 'date' | reversed %}
+      {% assign sorted_activities = site.activities | sort: 'date'%}
       {% for activity in sorted_activities %}
       {% assign tags_string = activity.tags | join: ' ' %}
       <li class="{{tags_string}}">
