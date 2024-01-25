@@ -1,10 +1,10 @@
 ---
-date: 2022-04-30
+date: 2023-09-23
 
-img: talk_1.png
-href: https://www.bilibili.com/video/BV1zY4y1k722
-title: 【MLNLP学术Talk】第1期 - 卡内基梅隆大学何俊贤：从统一的视角看参数高效的迁移学习
-people: 何俊贤
-detail: 本次会议很高兴邀请到内基梅隆大学计算机科学学院博士生何俊贤做专题报告，清华大学博士后柴成亮进行主持。
-tags: ['talk']
+img: meeting_2-1.png
+href: https://www.bilibili.com/video/BV1sz4y1F7Po
+title: 【MLNLP2023】大模型构建与微调
+people: 中国人工智能学会、中南大学
+detail: 随着数据规模的急剧增加和下游任务复杂度的快速增长，大模型的构建和微调已经成为深度学习研究的关键话题。本论坛主要关注大模型构建背后的原理和方法，包括大模型对齐、大模型工具学习、大模型高效微调，与大模型时代的研究方向。本论坛邀请四位知名研究人员分享他们关于大模型的研究成果，旨在为研究人员、学者和从业者提供大模型相关成果讨论与互动的平台。
+tags: ['meeting']
 ---

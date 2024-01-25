@@ -1,10 +1,10 @@
 ---
-date: 2022-06-25
+date: 2023-09-23
 
-img: talk_5.png
-href: https://www.bilibili.com/video/BV1dv4y1M7hq
-title: 【MLNLP学术Talk】第5期 - 北京大学张文涛：可扩展的图神经结构搜索系统
-people: 张文涛
-detail: 本次会议很高兴邀请到北京大学博士生张文涛做专题报告，MLNLP社区委员刘聪进行主持。
-tags: ['talk']
+img: meeting_2-5.png
+href: https://www.bilibili.com/video/BV1tu411M77e
+title: 【MLNLP2023】大模型与知识图谱
+people: 中国人工智能学会、中南大学
+detail: 知识图谱和大型语言模型都是用来表示和处理知识的手段。大模型补足了理解语言的能力，知识图谱则丰富了表示知识的方式，两者的深度结合必将为人工智能提供更为全面、可靠、可控的知识处理方法。本次大模型与知识图谱论坛邀请了四位优秀学者进行分享，他们将带来大模型与知识图谱领域的最新研究进展，并对知识图谱与大模型的融合之道展开深入探讨。
+tags: ['meeting']
 ---

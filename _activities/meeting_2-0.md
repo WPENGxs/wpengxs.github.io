@@ -1,10 +1,10 @@
 ---
-date: 2022-04-30
+date: 2023-09-23
 
-img: talk_1.png
-href: https://www.bilibili.com/video/BV1zY4y1k722
-title: 【MLNLP学术Talk】第1期 - 卡内基梅隆大学何俊贤：从统一的视角看参数高效的迁移学习
-people: 何俊贤
-detail: 本次会议很高兴邀请到内基梅隆大学计算机科学学院博士生何俊贤做专题报告，清华大学博士后柴成亮进行主持。
-tags: ['talk']
+img: meeting_2-0.png
+href: https://www.bilibili.com/video/BV1T84y1U7JU
+title: 【MLNLP2023】开幕式
+people: 中国人工智能学会、中南大学
+detail: MLNLP2023开幕式
+tags: ['meeting']
 ---
