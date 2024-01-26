@@ -75,11 +75,11 @@ layout: default
       {% assign tags_string = activity.tags | join: ' ' %}
       <li class="{{tags_string}}">
         <div class="row">
-          <div class="col-sm-2 card-img" style="height: 150px;">
+          <div class="col-sm-3 card-img" style="height: 150px;">
             <img src="/assets/ac_img/{{activity.img}}" style="width: 100%; height: 100%; object-fit: contain;border-radius: .25rem;" loading="lazy">
           </div>
-          <div class="col-sm-8">
-            <a href="{{activity.href}}" class="title">{{activity.title}}</a>
+          <div class="col-9">
+            <a href="{{activity.href}}" class="title" style="margin:-.5rem;">{{activity.title}}</a>
             <div class="author" style="margin-top: 5px;margin-bottom: 5px;">{{activity.people}}</div>
             <div class="periodical" style="margin-top: 5px;margin-bottom: 5px;">{{activity.detail}}</div>
             <div class="links"> 
