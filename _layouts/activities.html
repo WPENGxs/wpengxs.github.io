@@ -121,7 +121,7 @@ layout: default
   function createPaginationButtons(listItems) {
     var totalPages = Math.ceil(listItems.length / itemsPerPage);
 
-    var paginationDiv = document.getElementById("pagination");
+    var paginationDiv = document.getElementById("pagination select_btu");
     paginationDiv.innerHTML = ''; // 清空之前的按钮
 
     var maxButtonsToShow = Math.min(totalPages, 5); // 最多显示的按钮数量，取总页数和5的较小值
@@ -132,6 +132,13 @@ layout: default
       button.addEventListener("click", function () {
         currentPage = parseInt(this.textContent);
         showPage(currentPage, listItems);
+
+        var buttons = paginationDiv.getElementsByTagName("button");
+        for (var j = 0; j < buttons.length; j++) {
+          buttons[j].classList.remove("active");
+        }
+        // 将当前点击的按钮添加 active 类
+        this.classList.add("active");
       });
       paginationDiv.appendChild(button);
     }
