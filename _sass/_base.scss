@@ -410,15 +410,10 @@ footer.sticky-bottom {
 .select_btu{
   display: inline-block;
   padding: 5px;
-  margin: 0;
-}
-.select_btu button{
-  display: inline-block;
-  padding: 5px;
   margin: 0 2px;
   border: 1px solid #ccc;
 }
-.slelct_btu button.active{
+.slelct_btu.active{
   background-color: #444;
   color: #fff;
 }
