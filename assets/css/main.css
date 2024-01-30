@@ -158,6 +158,16 @@ footer.sticky-bottom { border-top: 1px solid var(--global-divider-color); paddin
 
 .pagination .page-item.active .page-link:hover { background-color: var(--global-theme-color); }
 
+.pagination .select_btu{
+    padding: 5px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+  }
+.pagination .slelct_btu.active{
+    background-color: #444;
+    color: #fff;
+  }
+
 .distill a:hover { border-bottom-color: var(--global-theme-color); text-decoration: none; }
 
 .people a { text-decoration: none; }
