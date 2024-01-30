@@ -134,12 +134,12 @@ layout: default
         currentPage = parseInt(this.textContent);
         showPage(currentPage, listItems);
 
-        var buttons = paginationDiv.getElementsByTagName("button");
-        for (var j = 0; j < buttons.length; j++) {
-          buttons[j].classList.remove("active");
-        }
-        // 将当前点击的按钮添加 active 类
-        this.classList.add("active");
+        // var buttons = paginationDiv.getElementsByTagName("button");
+        // for (var j = 0; j < buttons.length; j++) {
+        //   buttons[j].classList.remove("active");
+        // }
+        // // 将当前点击的按钮添加 active 类
+        // this.classList.add("active");
       });
       paginationDiv.appendChild(button);
     }
