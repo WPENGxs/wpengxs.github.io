@@ -130,10 +130,10 @@ layout: default
     for (var i = 1; i <= totalPages; i++) {
       var button = document.createElement("button");
       button.textContent = i;
+      button.classList.add("select_btu");
       if (i == 1){
         button.classList.add("active");
       }
-      button.classList.add("select_btu");
 
       button.addEventListener("click", function () {
         currentPage = parseInt(this.textContent);

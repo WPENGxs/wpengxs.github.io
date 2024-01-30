@@ -160,13 +160,13 @@ footer.sticky-bottom { border-top: 1px solid var(--global-divider-color); paddin
 
 .pagination .select_btu{
     padding-left: 8px;
-    padding-left: 8px;
+    padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
     margin: 2px 2px 2px 2px;
     border: 1px solid #ccc;
   }
-.pagination .slelct_btu .active{
+.pagination .select_btu.active{
     background-color: #444;
     color: #fff;
   }
