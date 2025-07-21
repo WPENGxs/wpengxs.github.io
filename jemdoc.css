@@ -372,3 +372,17 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+.left {
+/* 左对齐的内容样式 */
+width: 50%;
+}
+.right {
+/* 右对齐的内容样式 */
+width: 50%;
+text-align: right;
+}
